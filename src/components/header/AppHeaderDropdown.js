@@ -34,7 +34,7 @@ const AppHeaderDropdown = () => {
         <CDropdownHeader className="bg-body-secondary fw-semibold mb-2" style={{ color: '#398de0' }}>Usuario</CDropdownHeader>
         
         <CDropdownDivider />
-        <CDropdownItem href="#">
+        <CDropdownItem href="/#/login" onClick={() => navigate('/#/login')}>
           <CIcon icon={cilLockLocked} className="me-2" />
           Cerrar Sesión
         </CDropdownItem>

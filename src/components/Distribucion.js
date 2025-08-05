@@ -253,33 +253,39 @@ const Distribucion = () => {
               <CCard className="text-center" style={{ 
                 backgroundColor: 'transparent', 
                 border: '1px solid rgba(255, 255, 255, 0.1)',
-                height: '100px',
+                minHeight: '100px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
                 <CCardBody>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="text-center" style={{ flex: 1, paddingRight: "20px" }}>
-                      <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
-                        <span style={{marginRight: "5px"}}>🚛</span>
-                        <h6 style={{color:"#398de0", margin: 0}}>Retiros</h6>
+                  <div className="row g-3">
+                    <div className="col-12 col-sm-4">
+                      <div className="text-center">
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
+                          <span style={{marginRight: "5px"}}>🚛</span>
+                          <h6 style={{color:"#398de0", margin: 0}}>Retiros</h6>
+                        </div>
+                        <h4 className="mb-0" style={{color:"#398de0"}}>{formatTons(estadisticas.totalRetiros)}</h4>
                       </div>
-                      <h4 className="mb-0" style={{color:"#398de0"}}>{formatTons(estadisticas.totalRetiros)}</h4>
                     </div>
-                    <div className="text-center" style={{ flex: 1, paddingLeft: "20px", paddingRight: "20px" }}>
-                      <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
-                        <span style={{marginRight: "5px"}}>💰</span>
-                        <h6 className="text-success" style={{margin: 0}}>Ventas</h6>
+                    <div className="col-12 col-sm-4">
+                      <div className="text-center">
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
+                          <span style={{marginRight: "5px"}}>💰</span>
+                          <h6 className="text-success" style={{margin: 0}}>Ventas</h6>
+                        </div>
+                        <h4 className="text-success mb-0">{formatTons(estadisticas.totalVentas)}</h4>
                       </div>
-                      <h4 className="text-success mb-0">{formatTons(estadisticas.totalVentas)}</h4>
                     </div>
-                    <div className="text-center" style={{ flex: 1, paddingLeft: "20px" }}>
-                      <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
-                        <span style={{marginRight: "5px"}}>🏭</span>
-                        <h6 className="text-warning" style={{margin: 0}}>Fraccionamiento</h6>
+                    <div className="col-12 col-sm-4">
+                      <div className="text-center">
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
+                          <span style={{marginRight: "5px"}}>🏭</span>
+                          <h6 className="text-warning" style={{margin: 0}}>Fraccionamiento</h6>
+                        </div>
+                        <h4 className="text-warning mb-0">{formatTons(estadisticas.totalFraccionamiento)}</h4>
                       </div>
-                      <h4 className="text-warning mb-0">{formatTons(estadisticas.totalFraccionamiento)}</h4>
                     </div>
                   </div>
                 </CCardBody>

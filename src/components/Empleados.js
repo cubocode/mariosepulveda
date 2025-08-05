@@ -255,33 +255,39 @@ const Empleados = () => {
               <CCard className="text-center" style={{ 
                 backgroundColor: 'transparent', 
                 border: '1px solid rgba(255, 255, 255, 0.1)',
-                height: '100px',
+                minHeight: '100px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
                 <CCardBody>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="text-center" style={{ flex: 1, paddingRight: "20px" }}>
-                      <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
-                        <span style={{marginRight: "5px"}}>💰</span>
-                        <h6 style={{color:"#398de0", margin: 0}}>Sueldos</h6>
+                  <div className="row g-3">
+                    <div className="col-12 col-sm-4">
+                      <div className="text-center">
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
+                          <span style={{marginRight: "5px"}}>💰</span>
+                          <h6 style={{color:"#398de0", margin: 0}}>Sueldos</h6>
+                        </div>
+                        <h4 className="mb-0" style={{color:"#398de0"}}>{formatCurrency(estadisticas.totalSueldos)}</h4>
                       </div>
-                      <h4 className="mb-0" style={{color:"#398de0"}}>{formatCurrency(estadisticas.totalSueldos)}</h4>
                     </div>
-                    <div className="text-center" style={{ flex: 1, paddingLeft: "20px", paddingRight: "20px" }}>
-                      <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
-                        <span style={{marginRight: "5px"}}>💸</span>
-                        <h6 className="text-warning" style={{margin: 0}}>Adelantos</h6>
+                    <div className="col-12 col-sm-4">
+                      <div className="text-center">
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
+                          <span style={{marginRight: "5px"}}>💸</span>
+                          <h6 className="text-warning" style={{margin: 0}}>Adelantos</h6>
+                        </div>
+                        <h4 className="text-warning mb-0">{formatCurrency(estadisticas.totalAdelantos)}</h4>
                       </div>
-                      <h4 className="text-warning mb-0">{formatCurrency(estadisticas.totalAdelantos)}</h4>
                     </div>
-                    <div className="text-center" style={{ flex: 1, paddingLeft: "20px" }}>
-                      <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
-                        <span style={{marginRight: "5px"}}>📊</span>
-                        <h6 className="text-success" style={{margin: 0}}>Promedio</h6>
+                    <div className="col-12 col-sm-4">
+                      <div className="text-center">
+                        <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "10px"}}>
+                          <span style={{marginRight: "5px"}}>📊</span>
+                          <h6 className="text-success" style={{margin: 0}}>Promedio</h6>
+                        </div>
+                        <h4 className="text-success mb-0">{formatCurrency(estadisticas.promedioSueldo)}</h4>
                       </div>
-                      <h4 className="text-success mb-0">{formatCurrency(estadisticas.promedioSueldo)}</h4>
                     </div>
                   </div>
                 </CCardBody>
