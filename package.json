@@ -4,14 +4,14 @@
   "description": "App para Mario Sepulveda",
   "homepage": ".",
   "bugs": {
-    "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
+    "url": "https://github.com/cubocode/mariosepulveda"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
   },
   "license": "MIT",
-  "author": "The CoreUI Team (https://github.com/orgs/coreui/people)",
+  "author": "Cubo Code (https://github.com/cubocode)",
   "scripts": {
     "build": "vite build",
     "lint": "eslint",
